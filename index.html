@@ -2,11 +2,24 @@
 <html>
   <head>
   <title>Title of the document</title>
-  <script src="javaScript/base.js" />
+  <link rel="stylesheet" type="text/css" href="stylesheet/lib/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="stylesheet/base.css">
+  <script src="javaScript/lib/angular.min.js"></script>
+  <script src="javaScript/base.js"></script>
+
   </head>
 
-  <body>
-  The content of the document......
+  <body ng-app="gemStore">
+   <h1>My Web Page</h1>
+
+   <div ng-controller="StoreController as store">
+    <div class="product row">
+      <h3>
+        {{store.product.name}}
+        <em class="pull-right">{{store.product.price}}</em>
+      </h3>
+    </div>
+  </div>
   </body>
 
 </html>
